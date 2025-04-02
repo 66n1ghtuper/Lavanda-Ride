@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link as ScrollLink, Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import './Header.css';
 import burgerIcon from './123.png';
 
@@ -30,7 +31,10 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const handleInvestorClick = () => {
+  const handleNavClick = (sectionId = '') => {
+    if (!isHomePage && sectionId) {
+      window.location.href = `/#${sectionId}`;
+    }
     closeMenu();
   };
 
@@ -40,13 +44,13 @@ const Header = () => {
       style={isHomePage ? { background: 'linear-gradient(135deg,#A239EA, #eaeaea72)' } : {}}
     >
       <div className="header__logo">
-        <Link to="/" className="header__logo-link">
+        <Link to="/" className="header__logo-link" onClick={closeMenu}>
           <span className="header__logo-text">Lavanda Ride</span>
         </Link>
       </div>
       <div className="header__right-section">
         <div className="header__left-group">
-          <Link to="/" className="header__investor-button">
+          <Link to="/" className="header__investor-button" onClick={closeMenu}>
             {t('header.becomeInvestor')}
           </Link>
           <div className="header__burger-menu" onClick={toggleMenu}>
@@ -65,7 +69,7 @@ const Header = () => {
             <Link 
               to="/" 
               className="header__investor-button-mobile" 
-              onClick={handleInvestorClick}
+              onClick={() => handleNavClick()}
             >
               {t('header.becomeInvestor')}
             </Link>
@@ -73,17 +77,36 @@ const Header = () => {
           {isHomePage && (
             <>
               <li className="header__nav-item">
-                <ScrollLink to="tariffs" smooth={true} duration={500} offset={-87} onClick={closeMenu} className="header__nav-link">
+                <ScrollLink 
+                  to="tariffs" 
+                  smooth={true} 
+                  duration={500} 
+                  offset={-87} 
+                  onClick={closeMenu} 
+                  className="header__nav-link"
+                >
                   {t('header.tariffs')}
                 </ScrollLink>
               </li>
               <li className="header__nav-item">
-                <ScrollLink to="usage-instructions" smooth={true} duration={500} onClick={closeMenu} className="header__nav-link">
+                <ScrollLink 
+                  to="usage-instructions" 
+                  smooth={true} 
+                  duration={500} 
+                  onClick={closeMenu} 
+                  className="header__nav-link"
+                >
                   {t('header.usageInstructions')}
                 </ScrollLink>
               </li>
               <li className="header__nav-item">
-                <ScrollLink to="contact-section" smooth={true} duration={500} onClick={closeMenu} className="header__nav-link">
+                <ScrollLink 
+                  to="contact-section" 
+                  smooth={true} 
+                  duration={500} 
+                  onClick={closeMenu} 
+                  className="header__nav-link"
+                >
                   {t('header.contact')}
                 </ScrollLink>
               </li>
