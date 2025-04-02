@@ -226,7 +226,7 @@ const ScooterStats = () => {
             
             <div className="stats-numbers-block">
               <div className="stats-number-item">
-                <div className="stats-big-number">1 000+</div>
+                <div className="stats-big-number">20+</div>
                 <div className="stats-number-description">
                   <span className="highlighted-text">{t('scooterStats.scootersOnRoad')}</span> {t('scooterStats.scootersGrowth')}
                 </div>
@@ -242,7 +242,7 @@ const ScooterStats = () => {
               </div>
               
               <div className="stats-number-item">
-                <div className="stats-big-number">$20K</div>
+                <div className="stats-big-number">$10K</div>
                 <div className="stats-number-description">
                   {t('scooterStats.dailyEarnings')} <span className="highlighted-text">{t('scooterStats.monthlyEarnings')}</span>
                 </div>
