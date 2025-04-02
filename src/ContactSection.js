@@ -73,10 +73,10 @@ const ContactSection = () => {
         
 
           <div className="cs-social-icons">
-            <a href="https://www.instagram.com/ваш_аккаунт" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/lavanta_ride?igsh=azBscGtpd2hoaXZz" target="_blank" rel="noopener noreferrer">
               <img src={InstagramIcon} alt="Instagram" className="cs-social-icon" />
             </a>
-            <a href="https://www.Telegram.com/ваш_аккаунт" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/forward369" target="_blank" rel="noopener noreferrer">
               <img src={TelegramIcon} alt="Telegram" className="cs-social-icon" />
             </a>
             <a href="https://www.tiktok.com/@lavanta.ride?_t=ZS-8v8akxHJyMs&_r=1" target="_blank" rel="noopener noreferrer">
