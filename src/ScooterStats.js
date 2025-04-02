@@ -211,7 +211,7 @@ const ScooterStats = () => {
   }, [progress, t]);
 
   const handleInvestorClick = () => {
-    navigate('/investments');
+    window.location.href = "https://api.whatsapp.com/send/?phone=905051038350&text&type=phone_number&app_absent=0"; // Замените на нужный URL
   };
 
   return (

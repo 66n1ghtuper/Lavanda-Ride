@@ -58,15 +58,15 @@ export default function CommentSystem() {
           <div className="info-card">
             <h3 className="info-header">{t('commentSystem.contactInfo')}</h3>
             <div className="info-content">
-              <p className="info-item"><strong>{t('commentSystem.email')}:</strong> ridelavanta@gmail.com</p>
+              <p className="info-item"><strong>{t('commentSystem.email')}:</strong>info@lavantaride.com</p>
               <p className="info-item"><strong>{t('commentSystem.phone')}:</strong> +905051038350</p>
               <p className="info-item"><strong>{t('commentSystem.address')}:</strong> Yenigün, Mevlana Cd. No:76A, 07310 Muratpaşa/Antalya</p>
               <p className="info-item"><strong>{t('commentSystem.workingHours')}:</strong> 24/7</p>
             </div>
             <div className="social-links">
-              <a href="#" className="social-link">Telegram</a>
+              <a href="https://www.instagram.com/lavanta_ride/" className="social-link">Instagram</a>
               <a href="https://www.tiktok.com/@lavanta.ride?_t=ZS-8v8akxHJyMs&_r=1" className="social-link">TikTok</a>
-              <a href="#" className="social-link">WhatsApp</a>
+              <a href="https://api.whatsapp.com/send/?phone=905051038350&text&type=phone_number&app_absent=0" className="social-link">WhatsApp</a>
             </div>
           </div>
         </div>
