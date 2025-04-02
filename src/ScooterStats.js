@@ -242,7 +242,7 @@ const ScooterStats = () => {
               </div>
               
               <div className="stats-number-item">
-                <div className="stats-big-number">$10K</div>
+                <div className="stats-big-number">$20K</div>
                 <div className="stats-number-description">
                   {t('scooterStats.dailyEarnings')} <span className="highlighted-text">{t('scooterStats.monthlyEarnings')}</span>
                 </div>
