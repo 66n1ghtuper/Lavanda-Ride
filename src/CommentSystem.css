@@ -1,0 +1,202 @@
+.comment-section-background {
+    background: linear-gradient(to top, rgba(18, 18, 26, 0.9) 0%, rgba(30, 30, 40, 0.9) 50%, rgba(42, 15, 56, 0.9) 100%);
+  }
+  
+  .comment-interface-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px;
+    gap: 2rem;
+    flex-direction: row-reverse;
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .comment-content-area {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .comment-content-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 5, 30, 0.85);
+    z-index: 0;
+  }
+  
+  .contact-info-panel {
+    width: 350px;
+    height: 465px;
+    padding: 2rem;
+    background: rgba(10, 5, 30, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .info-card {
+    position: relative;
+    z-index: 1;
+    color: #eee;
+  }
+  
+  .info-header {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.5);
+  }
+  
+  .info-content {
+    margin-bottom: 2rem;
+  }
+  
+  .info-item {
+    margin-bottom: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .social-link {
+    color: #8a2be2;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-align: center;
+  }
+  
+  .social-link:hover {
+    background: rgba(138, 43, 226, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .comment-action-button {
+    position: relative;
+    background: linear-gradient(45deg, #8a2be2, #4b0082);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: block;
+    margin-right: auto; /* Added to align left */
+  }
+  
+  .comment-action-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .comment-feed {
+    display: grid;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Added to align left */
+  }
+  
+  .comment-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.4s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: left; /* Added to align left */
+  }
+  
+  .comment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .comment-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Changed to align left */
+  }
+  
+  .comment-author {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: auto; /* Changed to align left */
+  }
+  
+  .comment-timestamp {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-left: 0; /* Changed from auto to 0 to align left */
+    order: 1; /* Added to move timestamp below author */
+  }
+  
+  .comment-body {
+    color: #eee;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 2px solid #8a2be2;
+    text-align: left; /* Added to align left */
+  }
+  
+  @media (max-width: 768px) {
+    .comment-interface-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .comment-content-area, 
+    .contact-info-panel {
+      width: auto;
+      padding: 1rem;
+      height: auto;
+    }
+    
+    .comment-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .comment-timestamp {
+      margin-left: 0;
+    }
+  
+    .contact-info-panel {
+      order: -1;
+    }
+  }

@@ -1,0 +1,205 @@
+.cs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  opacity: 0;
+  animation: cs-fadeIn 1s ease forwards;
+}
+
+@keyframes cs-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cs-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color:#8808c3cf;
+  text-align: center;
+  font-weight: 600;
+  animation: cs-slideIn 0.8s ease-out;
+}
+
+
+.cs-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.cs-info {
+  flex: 1;
+  text-align: left;
+  background: linear-gradient(135deg,#A239EA, #eaeaea72);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: cs-slideInLeft 0.8s ease-out;
+}
+
+
+.cs-info-item {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.cs-info-item:hover {
+  color: #e4dada;
+}
+
+.cs-install-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  animation: cs-fadeIn 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.cs-download-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ffffff53;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cs-download-button:hover {
+  background-color: #e0e0e02c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 16, 194, 0.312);
+}
+
+.cs-form {
+  flex: 1;
+  background: linear-gradient(to bottom,#A239EA, #eaeaea72);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: cs-slideInRight 0.8s ease-out;
+}
+ 
+.cs-form h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.cs-form input,
+.cs-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-form input:focus,
+.cs-form textarea:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(194, 99, 16, 0.2);
+  outline: none;
+}
+
+.cs-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.cs-form button {
+  display: block; /* Делаем кнопку блочным элементом */
+  margin-right: auto; /* Выравниваем по левому краю */
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color:#A239EA;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: left; /* Выравниваем текст внутри кнопки по левому краю */
+}
+
+.cs-form button:hover {
+  background-color:#ae3df9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(137, 40, 167, 0.3);
+}
+
+.cs-social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cs-social-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.cs-social-icon:hover {
+  opacity: 0.7;
+}
+
+@keyframes cs-slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cs-slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cs-slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .cs-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .cs-info,
+  .cs-form {
+    width: 100%;
+  }
+}

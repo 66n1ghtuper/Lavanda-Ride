@@ -1,0 +1,98 @@
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link as ScrollLink, Link, useLocation } from 'react-router-dom';
+import './Header.css';
+import burgerIcon from './123.png';
+
+const Header = () => {
+  const { t, i18n } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const languages = ['ru', 'en', 'tr'];
+  const [currentLangIndex, setCurrentLangIndex] = useState(0);
+  const location = useLocation();
+  const [isHomePage, setIsHomePage] = useState(false);
+
+  useEffect(() => {
+    setIsHomePage(location.pathname === '/');
+  }, [location]);
+
+  const handleLanguageChange = () => {
+    const nextLangIndex = (currentLangIndex + 1) % languages.length;
+    i18n.changeLanguage(languages[nextLangIndex]);
+    setCurrentLangIndex(nextLangIndex);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleInvestorClick = () => {
+    closeMenu();
+  };
+
+  return (
+    <header 
+      className="header__container" 
+      style={isHomePage ? { background: 'linear-gradient(135deg,#A239EA, #eaeaea72)' } : {}}
+    >
+      <div className="header__logo">
+        <Link to="/" className="header__logo-link">
+          <span className="header__logo-text">Lavanda Ride</span>
+        </Link>
+      </div>
+      <div className="header__right-section">
+        <div className="header__left-group">
+          <Link to="/" className="header__investor-button">
+            {t('header.becomeInvestor')}
+          </Link>
+          <div className="header__burger-menu" onClick={toggleMenu}>
+            <img src={burgerIcon} alt="Menu" className="header__burger-icon" />
+          </div>
+        </div>
+        <div className="header__language-switcher">
+          <button onClick={handleLanguageChange}>
+            {languages[currentLangIndex].toUpperCase()}
+          </button>
+        </div>
+      </div>
+      <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
+        <ul className="header__nav-list">
+          <li className="header__nav-item header__nav-item--investor">
+            <Link 
+              to="/" 
+              className="header__investor-button-mobile" 
+              onClick={handleInvestorClick}
+            >
+              {t('header.becomeInvestor')}
+            </Link>
+          </li>
+          {isHomePage && (
+            <>
+              <li className="header__nav-item">
+                <ScrollLink to="tariffs" smooth={true} duration={500} offset={-87} onClick={closeMenu} className="header__nav-link">
+                  {t('header.tariffs')}
+                </ScrollLink>
+              </li>
+              <li className="header__nav-item">
+                <ScrollLink to="usage-instructions" smooth={true} duration={500} onClick={closeMenu} className="header__nav-link">
+                  {t('header.usageInstructions')}
+                </ScrollLink>
+              </li>
+              <li className="header__nav-item">
+                <ScrollLink to="contact-section" smooth={true} duration={500} onClick={closeMenu} className="header__nav-link">
+                  {t('header.contact')}
+                </ScrollLink>
+              </li>
+            </>
+          )}
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

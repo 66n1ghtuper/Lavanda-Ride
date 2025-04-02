@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(18, 18, 26, 0.9) 0%, rgba(42, 15, 56, 0.9) 100%);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Убрали подчеркивание у логотипа */
+.header__logo-link {
+    text-decoration: none;
+}
+
+.header__logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fffdfd;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Play', sans-serif;
+}
+
+.header__right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__left-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Убрали подчеркивание у кнопок */
+.header__investor-button,
+.header__investor-button-mobile {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #8808c3;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Play', sans-serif;
+    text-decoration: none; /* Добавлено */
+    display: inline-block; /* Для правильного отображения Link как кнопки */
+}
+
+.header__investor-button:hover,
+.header__investor-button-mobile:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none; /* Убедимся, что при наведении тоже нет подчеркивания */
+}
+
+.header__language-switcher button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color:#9805dc1d;
+    color: #aa00f9cf;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Play', sans-serif;
+}
+
+.header__language-switcher button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.header__burger-menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.header__burger-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.header__nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg,#8808c3cf, #eaeaea72);
+    z-index: 999;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header__nav--open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Убрали подчеркивание у навигационных ссылок */
+.header__nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    color: white;
+    text-decoration: none; /* Добавлено */
+    font-family: 'Play', sans-serif;
+    font-size: 18px;
+}
+
+.header__investor-button-mobile {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    color: rgb(70, 6, 116);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; /* Уже было */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 0;
+}
+  
+.header__investor-button-mobile:hover {
+    background: #ffffff;
+    text-decoration: none; /* Добавлено */
+}
+
+/* Убрали анимацию подчеркивания */
+.header__nav-link::after {
+    display: none; /* Убрали эффект подчеркивания */
+}
+
+.header__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__nav-item {
+    position: relative;
+    margin: 15px 0;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header__nav-item--investor {
+    order: -1;
+    margin-bottom: 30px;
+}
+
+.header__investor-button-mobile {
+    width: 80%;
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+    .header__logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .header__investor-button {
+        display: none;
+    }
+    
+    .header__left-group {
+        gap: 8px;
+    }
+    
+    .header__burger-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .header__language-switcher button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .header__nav {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .header__nav-list {
+        margin: auto 0;
+    }
+    
+    .header__nav-item {
+        margin: 12px 0;
+    }
+    
+    .header__nav-item--investor {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .header__investor-button-mobile {
+        display: none;
+    }
+    
+    .header__burger-menu {
+        display: none;
+    }
+}

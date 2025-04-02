@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tariffs-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.tariffs-section h2 {
+    margin-top: 150px;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.isl {
+    position: relative;
+    max-width: 600px;
+    width: 80%;
+    min-width: 200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px 20px 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.icon-circle {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.icon-circle-second {
+    position: absolute;
+    top: -195px;
+    right: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-circle-second p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.curved-background {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg,#A239EA, #eaeaea72);
+    position: relative;
+    overflow: hidden;
+}
+
+.curved-background::before,
+.curved-background::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.curved-background::before {
+    top: -1px;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.curved-background::after {
+    bottom: -1px;
+    border-radius: 0 0 0 0 / 0 0 0 0;
+}
