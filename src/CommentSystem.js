@@ -64,7 +64,7 @@ export default function CommentSystem() {
               <p className="info-item"><strong>{t('commentSystem.workingHours')}:</strong> 24/7</p>
             </div>
             <div className="social-links">
-              <a href="https://www.instagram.com/lavanta_ride/" className="social-link">Instagram</a>
+              <a href="https://www.instagram.com/lavanta_ride?igsh=azBscGtpd2hoaXZz" className="social-link">Instagram</a>
               <a href="https://www.tiktok.com/@lavanta.ride?_t=ZS-8v8akxHJyMs&_r=1" className="social-link">TikTok</a>
               <a href="https://api.whatsapp.com/send/?phone=905051038350&text&type=phone_number&app_absent=0" className="social-link">WhatsApp</a>
             </div>
