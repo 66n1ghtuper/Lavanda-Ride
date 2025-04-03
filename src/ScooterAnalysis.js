@@ -129,7 +129,7 @@ const ScooterAnalysis = () => {
         <h2>Основные переменные</h2>
         <ul className="variables-list">
           <li><strong>Стоимость аренды (P):</strong> 10 TRY/минута</li>
-          <li><strong>Среднее время аренды (t):</strong> 30, 60, 90, 120 минут/день</li>
+          <li><strong>Среднее время аренды (t):</strong> 60, 90, 120 минут/день</li>
           <li><strong>Количество дней (D):</strong> 30 дней/месяц</li>
           <li><strong>Инвестиции на 1 скутер (I):</strong> 57 000 TRY</li>
           <li><strong>Базовые расходы (C):</strong> 2 476 TRY/месяц</li>
