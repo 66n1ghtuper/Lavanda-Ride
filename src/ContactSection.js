@@ -62,11 +62,11 @@ const ContactSection = () => {
       <div className="cs-content">
         <div className="cs-info">
           <div className="cs-info-item">
-            <p>{t('contactSection.email')}: ridelavanta@gmail.com</p>
+            <p>{t('contactSection.email')}:info@lavantaride.com</p>
           </div>
           <div className="cs-info-item">
-            <p>{t('contactSection.phone')}: +905051038350</p>
-          </div>
+  <p>{t('contactSection.phone')}: <span style={{fontWeight: '500'}}>+90 505 103 83 50</span></p>
+</div>
           <div className="cs-info-item">
             <p>{t('contactSection.address')}: Yenigün, Mevlana Cd. No:76A, 07310 Muratpaşa/Antalya</p>
           </div>

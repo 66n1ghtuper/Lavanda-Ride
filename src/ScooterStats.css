@@ -369,7 +369,75 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
 }
+/* Стили для кнопки математической модели */
+.stats-model-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(123, 44, 191, 0.2);
+  border: 1px solid rgba(123, 44, 191, 0.5);
+  border-radius: 8px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
 
+.stats-model-button:hover {
+  background: rgba(123, 44, 191, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(123, 44, 191, 0.2);
+}
+
+.stats-model-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7b2cbf;
+  flex-shrink: 0;
+}
+
+.stats-model-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stats-model-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ffffff 0%, #d6b8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Анимация для кнопки модели */
+.stats-content-wrapper.animated .stats-model-button {
+  animation: fadeInUp 0.8s 0.6s forwards;
+  opacity: 0;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .stats-model-button {
+    padding: 12px 15px;
+  }
+  
+  .stats-model-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .stats-model-text {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 768px) {
   .investment-info-box {
     padding: 20px;

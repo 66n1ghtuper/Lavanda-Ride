@@ -6,18 +6,7 @@
     box-sizing: border-box;
 }
 
-.header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: linear-gradient(to bottom, rgba(18, 18, 26, 0.9) 0%, rgba(42, 15, 56, 0.9) 100%);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+
 
 /* Убрали подчеркивание у логотипа */
 .header__logo-link {
@@ -191,7 +180,33 @@
     font-size: 16px;
     border-radius: 25px;
 }
-
+/* Добавляем новые стили для логотипа */
+.header__logo-image {
+    height: 40px; /* Подберите подходящую высоту */
+    width: auto; /* Сохраняем пропорции */
+    object-fit: contain;
+  }
+  
+  /* Удаляем старые стили для текстового логотипа */
+  .header__logo-text {
+    display: none;
+  }
+  
+  /* Остальные стили остаются без изменений */
+  .header__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: linear-gradient(to bottom, rgba(18, 18, 26, 0.9) 0%, rgba(42, 15, 56, 0.9) 100%);
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+  
+  /* ... остальные стили остаются без изменений ... */
 @media (max-width: 768px) {
     .header__logo-text {
         font-size: 1.3rem;

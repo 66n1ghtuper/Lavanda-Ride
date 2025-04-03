@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import './Header.css';
 import burgerIcon from './123.png';
+import logoImage from './0909.png'; // Импортируем изображение логотипа
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -38,6 +39,14 @@ const Header = () => {
     closeMenu();
   };
 
+  const handleInvestorClick = (e) => {
+    if (isHomePage) {
+      e.preventDefault();
+      window.location.href = '/investments';
+    }
+    closeMenu();
+  };
+
   return (
     <header 
       className="header__container" 
@@ -45,13 +54,22 @@ const Header = () => {
     >
       <div className="header__logo">
         <Link to="/" className="header__logo-link" onClick={closeMenu}>
-          <span className="header__logo-text">Lavanta Ride</span>
+          {/* Заменяем текстовый логотип на изображение */}
+          <img 
+            src={logoImage} 
+            alt="Lavanta Ride" 
+            className="header__logo-image"
+          />
         </Link>
       </div>
       <div className="header__right-section">
         <div className="header__left-group">
-          <Link to="/" className="header__investor-button" onClick={closeMenu}>
-            {t('header.becomeInvestor')}
+          <Link 
+            to={isHomePage ? "/investments" : "/"} 
+            className="header__investor-button" 
+            onClick={handleInvestorClick}
+          >
+            {isHomePage ? t('header.investmentOpportunities') : t('header.becomeInvestor')}
           </Link>
           <div className="header__burger-menu" onClick={toggleMenu}>
             <img src={burgerIcon} alt="Menu" className="header__burger-icon" />
@@ -67,11 +85,11 @@ const Header = () => {
         <ul className="header__nav-list">
           <li className="header__nav-item header__nav-item--investor">
             <Link 
-              to="/" 
+              to={isHomePage ? "/investments" : "/"} 
               className="header__investor-button-mobile" 
-              onClick={() => handleNavClick()}
+              onClick={handleInvestorClick}
             >
-              {t('header.becomeInvestor')}
+              {isHomePage ? t('header.investmentOpportunities') : t('header.becomeInvestor')}
             </Link>
           </li>
           {isHomePage && (

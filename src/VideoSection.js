@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './VideoSection.css';
-import videoFile from './ssW.MOV';
+import videoFile from './WWW.MOV';
 
 const VideoSection = () => {
   const { t } = useTranslation();

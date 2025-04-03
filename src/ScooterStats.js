@@ -186,7 +186,7 @@ const ScooterStats = () => {
         if (progress > i * 0.2) {
           ctx.fillStyle = '#ffffff';
           ctx.font = '14px Arial';
-          ctx.textAlign = 'center';
+          ctx.textAlign = 'center'; // Исправлено с : на =
           ctx.fillText(`${value}K`, x + barWidth / 2, y - 10);
         }
       });
@@ -211,7 +211,12 @@ const ScooterStats = () => {
   }, [progress, t]);
 
   const handleInvestorClick = () => {
-    window.location.href = "https://api.whatsapp.com/send/?phone=905051038350&text&type=phone_number&app_absent=0"; // Замените на нужный URL
+    window.location.href = "https://api.whatsapp.com/send/?phone=905051038350&text&type=phone_number&app_absent=0";
+  };
+
+  const handleModelClick = () => {
+    // Переход на страницу с математической моделью
+    navigate('/math-model'); // Укажите здесь ваш путь к странице
   };
 
   return (
@@ -241,12 +246,20 @@ const ScooterStats = () => {
                 <div className="stats-divider-line"></div>
               </div>
               
-              <div className="stats-number-item">
-                <div className="stats-big-number">$10K</div>
-                <div className="stats-number-description">
-                  {t('scooterStats.dailyEarnings')} <span className="highlighted-text">{t('scooterStats.monthlyEarnings')}</span>
-                </div>
-              </div>
+              {/* Кнопка математической модели */}
+              <button 
+  className="stats-model-button"
+  onClick={handleModelClick} // Правильный обработчик
+>
+  <div className="stats-model-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div className="stats-model-text">
+    {t('scooterStats.mathModel')}
+  </div>
+</button>
             </div>
             
             <div className="stats-quote-box">

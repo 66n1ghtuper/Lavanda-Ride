@@ -14,6 +14,7 @@ i18n
             contact: 'Contact Information',
           invest: '  Investments',
           becomeInvestor: 'Go to Home',
+          investmentOpportunities:'Investment',
           },
           islandSection: {
             title: 'Lavanta Ride',
@@ -81,7 +82,7 @@ i18n
           downloadButton: 'Download',
           contactUs: 'Contact Us',
           namePlaceholder: 'Your Name',
-          usernamePlaceholder: 'Username (without @)',
+          usernamePlaceholder: 'Username TG(without @)',
           messagePlaceholder: 'Your Message',
           submitButton: 'Send',
           successMessage: 'Message sent successfully!',
@@ -108,6 +109,7 @@ i18n
           step3Text: 'Daily payouts to your account',
           scooterGrowthTitle: 'Growth of the number of scooters by quarters',
           userGrowthTitle: 'Growth of the number of users per day',
+          mathModel: "Mathematical model",
       },
       commentSystem: {
         loadError: "Error loading comments",
@@ -168,6 +170,7 @@ i18n
             contact: 'Контактная информация',
             invest: 'Инвестиции',
             becomeInvestor:'На главную',
+            investmentOpportunities:'Инвестиции',
           },
           islandSection: {
             title: 'Lavanta Ride',
@@ -235,7 +238,7 @@ i18n
             downloadButton: 'Скачать',
             contactUs: 'Свяжитесь с нами',
             namePlaceholder: 'Ваше имя',
-            usernamePlaceholder: 'username (без @)',
+            usernamePlaceholder: 'username TG(без @)',
             messagePlaceholder: 'Ваш вопрос',
             submitButton: 'Отправить',
             successMessage: 'Сообщение успешно отправлено!',
@@ -261,7 +264,8 @@ i18n
           step3Title: 'Получаете пассивный доход с каждой поездки',
           step3Text: 'Ежедневные выплаты на ваш счет',
           scooterGrowthTitle: 'Рост количества скутеров по кварталам',
-          userGrowthTitle: 'Рост количества пользователей в день'
+          userGrowthTitle: 'Рост количества пользователей в день',
+          mathModel: "Математическая модель",
         },
         commentSystem: {
     loadError: "Ошибка загрузки комментариев",
@@ -323,6 +327,7 @@ i18n
             contact: 'İletişim Bilgileri',
             invest: 'Yatırımlar',
             becomeInvestor: 'Ana Sayfaya Git',
+            investmentOpportunities:'Yatırım',
           },
           islandSection: {
             title: 'Lavanta Ride',
@@ -390,7 +395,7 @@ i18n
         downloadButton: 'İndir',
         contactUs: 'Bizimle İletişime Geçin',
         namePlaceholder: 'Adınız',
-        usernamePlaceholder: 'Kullanıcı adı ( @ olmadan)',
+        usernamePlaceholder: 'Kullanıcı adı TG( @ olmadan)',
         messagePlaceholder: 'Mesajınız',
         submitButton: 'Gönder',
         successMessage: 'Mesaj başarıyla gönderildi!',
@@ -417,6 +422,7 @@ i18n
         step3Text: "Hesabınıza günlük ödemeler",
         scooterGrowthTitle: "Çeyrekler itibarıyla scooter sayısındaki artış",
         userGrowthTitle: "Günlük kullanıcı sayısındaki artış",
+        mathModel: "Matematik model",
     },
     commentSystem: {
       loadError: "Yorumlar yüklenirken hata",

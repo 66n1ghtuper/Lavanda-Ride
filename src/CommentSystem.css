@@ -36,7 +36,7 @@
   
   .contact-info-panel {
     width: 350px;
-    height: 465px;
+    height: 495px;
     padding: 2rem;
     background: rgba(10, 5, 30, 0.9);
     border-radius: 15px;
@@ -172,7 +172,34 @@
     border-left: 2px solid #8a2be2;
     text-align: left; /* Added to align left */
   }
+  .pdf-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
   
+  .pdf-link:hover {
+    color: #d0ccd4;
+    transform: translateY(-2px);
+  }
+  
+  .pdf-badge {
+    background-color: #ff2d2d;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .pdf-link:hover .pdf-badge {
+    background-color: #ff5252;
+    transform: scale(1.05);
+  }
   @media (max-width: 768px) {
     .comment-interface-container {
       flex-direction: column;
