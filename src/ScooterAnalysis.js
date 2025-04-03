@@ -27,7 +27,7 @@ ChartJS.register(
 const ScooterAnalysis = () => {
   // Исходные данные
   const P = 10;
-  const rentalTimes = [30, 60, 90, 120];
+  const rentalTimes = [60, 90, 120];
   const D = 30;
   const I = 57000;
   const baseC = 2476;
