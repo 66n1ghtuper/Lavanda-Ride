@@ -62,7 +62,7 @@ const ContactSection = () => {
       <div className="cs-content">
         <div className="cs-info">
           <div className="cs-info-item">
-            <p>{t('contactSection.email')}:info@lavantaride.com</p>
+            <p>{t('contactSection.email')}: info@lavantaride.com</p>
           </div>
           <div className="cs-info-item">
   <p>{t('contactSection.phone')}: <span style={{fontWeight: '500'}}>+90 505 103 83 50</span></p>

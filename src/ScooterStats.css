@@ -422,7 +422,81 @@
   animation: fadeInUp 0.8s 0.6s forwards;
   opacity: 0;
 }
+/* Action Buttons Container */
+.action-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
+}
+
+/* Contract Action Button */
+.contract-action-button {
+  padding: 15px 30px;
+  background: rgba(123, 44, 191, 0.1);
+  border: 1px solid rgba(123, 44, 191, 0.3);
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contract-action-button:hover {
+  background: rgba(123, 44, 191, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contract-action-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.5s;
+}
+
+.contract-action-button:hover::after {
+  left: 100%;
+}
+
+.document-symbol {
+  transition: transform 0.3s ease;
+}
+
+.contract-action-button:hover .document-symbol {
+  transform: scale(1.1);
+}
+
+/* Mobile adaptation */
+@media (max-width: 768px) {
+  .action-buttons-container {
+    margin-top: 30px;
+    gap: 12px;
+  }
+  
+  .contract-action-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
   .stats-model-button {

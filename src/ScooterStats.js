@@ -186,7 +186,7 @@ const ScooterStats = () => {
         if (progress > i * 0.2) {
           ctx.fillStyle = '#ffffff';
           ctx.font = '14px Arial';
-          ctx.textAlign = 'center'; // Исправлено с : на =
+          ctx.textAlign = 'center';
           ctx.fillText(`${value}K`, x + barWidth / 2, y - 10);
         }
       });
@@ -215,8 +215,11 @@ const ScooterStats = () => {
   };
 
   const handleModelClick = () => {
-    // Переход на страницу с математической моделью
-    navigate('/math-model'); // Укажите здесь ваш путь к странице
+    navigate('/math-model');
+  };
+
+  const handleContractClick = () => {
+    window.open("https://drive.google.com/file/d/1dg2-qc1m7uc_YpCJwHOHhZPI1c0Q0ywD/view?usp=sharing", "_blank");
   };
 
   return (
@@ -246,20 +249,19 @@ const ScooterStats = () => {
                 <div className="stats-divider-line"></div>
               </div>
               
-              {/* Кнопка математической модели */}
               <button 
-  className="stats-model-button"
-  onClick={handleModelClick} // Правильный обработчик
->
-  <div className="stats-model-icon">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
-    </svg>
-  </div>
-  <div className="stats-model-text">
-    {t('scooterStats.mathModel')}
-  </div>
-</button>
+                className="stats-model-button"
+                onClick={handleModelClick}
+              >
+                <div className="stats-model-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div className="stats-model-text">
+                  {t('scooterStats.mathModel')}
+                </div>
+              </button>
             </div>
             
             <div className="stats-quote-box">
@@ -270,12 +272,22 @@ const ScooterStats = () => {
               <p>{t('scooterStats.quote')}</p>
             </div>
             
-            <button className="stats-action-button" onClick={handleInvestorClick}>
-              {t('scooterStats.joinInvestors')}
-              <svg className="arrow-symbol" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
+            <div className="action-buttons-container">
+              <button className="stats-action-button" onClick={handleInvestorClick}>
+                {t('scooterStats.joinInvestors')}
+                <svg className="arrow-symbol" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              
+              <button className="contract-action-button" onClick={handleContractClick}>
+                {t('scooterStats.viewContract')}
+                <svg className="document-symbol" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         

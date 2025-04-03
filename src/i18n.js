@@ -92,8 +92,8 @@ i18n
         scooterStats: {
           mainTitle: 'Exponential Growth of the Scooter Fleet',
           subtitle: '2024 has become a record year for development dynamics',
-          scootersOnRoad: 'Scooters on the roads',
-          scootersGrowth: 'in May, it will increase to 200 or more units',
+          scootersOnRoad: 'Our scooter fleet',
+          scootersGrowth: 'will increase by +200 units on the roads in May',          
           usersPerDay: 'Users per day',
           recordRides: '— record number of rides',
           dailyEarnings: 'Daily earnings for our partners —',
@@ -110,6 +110,7 @@ i18n
           scooterGrowthTitle: 'Growth of the number of scooters by quarters',
           userGrowthTitle: 'Growth of the number of users per day',
           mathModel: "Mathematical model",
+          viewContract: "Review our contract",
       },
       commentSystem: {
         loadError: "Error loading comments",
@@ -248,8 +249,8 @@ i18n
       scooterStats: {
           mainTitle: 'Экспоненциальный рост скутерного парка',
           subtitle: '2024 год стал рекордным по динамике развития',
-          scootersOnRoad: 'Скутеров на дорогах',
-          scootersGrowth: 'в мае увеличится до 200 и более единиц',
+          scootersOnRoad: 'Наш парк скутеров',
+          scootersGrowth: 'на дорогах в мае увеличится на +200 единиц',
           usersPerDay: 'Пользователей в день',
           recordRides: '— рекордное количество поездок',
           dailyEarnings: 'Ежедневно зарабатывают наши партнеры —',
@@ -266,6 +267,7 @@ i18n
           scooterGrowthTitle: 'Рост количества скутеров по кварталам',
           userGrowthTitle: 'Рост количества пользователей в день',
           mathModel: "Математическая модель",
+            viewContract: "Ознакомьтесь с нашим договором",
         },
         commentSystem: {
     loadError: "Ошибка загрузки комментариев",
@@ -405,8 +407,8 @@ i18n
       scooterStats: {
         mainTitle: "Scooter Filosu'nun Üstel Büyümesi",
         subtitle: "2024, gelişim dinamikleri açısından rekor bir yıl oldu",
-        scootersOnRoad: "Yollardaki scooter sayısı",
-        scootersGrowth: 'Mayıs ayında 200 ve üzeri birime yükselecek',
+        scootersOnRoad: 'Scooter filomuz',
+        scootersGrowth: 'Mayıs ayında yollarda +200 birim artacak',        
         usersPerDay: "Günlük kullanıcı sayısı",
         recordRides: "— rekor sayıda yolculuk",
         dailyEarnings: "Ortaklarımızın günlük kazancı —",
@@ -423,6 +425,7 @@ i18n
         scooterGrowthTitle: "Çeyrekler itibarıyla scooter sayısındaki artış",
         userGrowthTitle: "Günlük kullanıcı sayısındaki artış",
         mathModel: "Matematik model",
+        viewContract: "Sözleşmemizi inceleyin",
     },
     commentSystem: {
       loadError: "Yorumlar yüklenirken hata",

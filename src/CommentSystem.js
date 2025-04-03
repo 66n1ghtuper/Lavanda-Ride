@@ -58,19 +58,10 @@ export default function CommentSystem() {
           <div className="info-card">
             <h3 className="info-header">{t('commentSystem.contactInfo')}</h3>
             <div className="info-content">
-              <p className="info-item"><strong>{t('commentSystem.email')}:</strong> info@lavantaride.com</p>
+              <p className="info-item"><strong>{t('commentSystem.email')}:</strong>info@lavantaride.com</p>
               <p className="info-item"><strong>{t('commentSystem.phone')}:</strong> +905051038350</p>
               <p className="info-item"><strong>{t('commentSystem.address')}:</strong> Yenigün, Mevlana Cd. No:76A, 07310 Muratpaşa/Antalya</p>
-              <p className="info-item">
-                <a 
-                  href="https://drive.google.com/file/d/1dg2-qc1m7uc_YpCJwHOHhZPI1c0Q0ywD/view?usp=sharing" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="pdf-link"
-                >
-                  <strong>Ознакомьтесь с нашим договором</strong> <span className="pdf-badge">PDF</span>
-                </a>
-              </p>
+              <p className="info-item"><strong>{t('commentSystem.workingHours')}:</strong> 24/7</p>
             </div>
             <div className="social-links">
               <a href="https://www.instagram.com/lavanta_ride?igsh=azBscGtpd2hoaXZz" className="social-link">Instagram</a>
